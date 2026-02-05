@@ -32,7 +32,34 @@ jobs:
         with:
           host: 18.215.166.209
           username: ${{ secrets.EC2_USERNAME }}
-          key: ${{ secrets.EC2_SSH_KEY }}
+          key: |
+            -----BEGIN RSA PRIVATE KEY-----
+            MIIEpQIBAAKCAQEA2eGDGdmrLix51LMeCAcNcDUlR/lUulHIosYACl3IbGQ3yguZ
+            ODSZFMRkCk2IY24eFATLM1nsQJtv+tiCOegL0Wb+IkBkICWVHNNOEyIH3SPfgBCA
+            wCSTgeSl4ehobrkJowI1WbbM1yDtCwoC5eBsmEI24kr/OzkfCuNGlSIt5HhdHgUL
+            FWH9glxGlHSHf9sB06yUeOTeTkw8mmQMH1khxNgBD8Yng8CjNKI7b4JgKzxIRx8u
+            srGfBzLMCWNoV654RLlZjEb/sMQ7H73S9EVi2PQC9k9cUCGFP2djc3+/gpMybu7s
+            v5pm3GMjwrcBBbVxFA4sK7fTu6RtmUbI2cIWEwIDAQABAoIBAQC8DLuOcCQishhk
+            0EO3Qf8DPZtzx2qtdTDp7GLUj6UQiF7ub5xKunr1RZvimJCC4OPs+0Y2iAI0sPOx
+            WXTsba7liTMGdPT2Gfnc6zOTp+eJohChA51cOTVnAuV5WZHpHqOGob1SNUgO1UhC
+            It3lchHISD3+iiRIBUEZsJeW1+0sJm7ormFIeRyIx6wuzHxn9/DAH8+6tZT2bjUr
+            i5gyyrsIimO9dIsNC9GXiCCVQuOtPvPw9j8Zj29N8JA5XQoiJIzKSTChOrDY+fIY
+            iPflFvEBq2/xQAPnEJQAbtPhQm9OlLd7C8RHmi3GI3JiaQG9r9tYmSo6mNZ+nAMT
+            2aCmkuThAoGBAO1Xq2fbHnyWS0SRIuOnDNWEUhtv1xHmGiQEumUAisvynLIKDYKv
+            jMr9JkgXgL194thKxCoreVAbWNMudQlExoXQNlgIVe9bx0nGcxUGhrLKL8rL+SOe
+            5+us5MYz/y0YT6tF+3C7OHSSEHfHYTcQUBPjGKLIP7ac7sESIn+ZH4DlAoGBAOsC
+            MbFRNTvLerovhjvlKxzUzx0TrLYjyWfsgE5LWF2EuYGRVVOOPPBME/t3Rfi0Ljgj
+            H4L2j/qk0HnjLjlsKWVKSSJhVL/vtH9JRlKe36mg0pYQhYU4Lv7bLrjDypN14tQV
+            E7YmY0MDC1w1uKaby4jtTfDZuYjRy42k5oiBOuOXAoGAPr4XXOwrIgplOWoYzA/E
+            L8m8Hu6w71ViAbWSRNMg3gtz6wkHS033LU5AyXwVF4Lo7f7N3swBVPD1yVYVsG6T
+            AJrrUthZR15+z3z7vUotX6RdgAHuCcGfU8kv7Umfop8zqHZmowWLRh265r85buIM
+            GUXGpHnFhhP0devCXPLwxhUCgYEAnfn4m6DibxKmqnf9/U9dPuFTZNFv/XRrFIAn
+            8/m0KhFpfk7LFAL+te3+VMFl+PxuQXBi42+Jc8zNE9KCpTkvTpa0OPdCuE+Tfykr
+            q6h+45FnXlc22kndVZbTfoKnL59EXprYiE6f1VE7lr3KJb1/Acm75hcGIJIfClV6
+            XvK4OnsCgYEApZ6wcKOfsehxBZ0l6d9XmOVlOEMf8tDqoQ+9Z7ssrlaCSwdIyuq5
+            92eyZtOuoWBrKmHil/VQvgSgGixUUdJG8ruOPfDDyxjSzyrOtMBSwm8FSVL3/DgZ
+            7AKV8QPhPipYcKU7YiO8Xh6H/JOpzY4HoLwXGt+eOSa09t7GZQc7R8w=
+            -----END RSA PRIVATE KEY-----
           script: |
             # Pull the latest image
             docker pull santhoshkaleru/santhosh_devops_ui:latest

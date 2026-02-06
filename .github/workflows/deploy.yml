@@ -27,19 +27,13 @@ jobs:
     needs: build-and-push
     runs-on: ubuntu-latest
     steps:
-      - name: SSH and Deploy
+      - name: Deploy via SSH
         uses: appleboy/ssh-action@master
         with:
-          host: 54.145.81.145
-          username: ${{secrets.EC2_USERNAME}}
-          key: |
-              -----BEGIN OPENSSH PRIVATE KEY-----
-              b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-              QyNTUxOQAAACDV9QQvtPTiOELeQB/SHRclFzEOK4obbF59GQBse2lH6gAAAKAFR0K4BUdC
-              uAAAAAtzc2gtZWQyNTUxOQAAACDV9QQvtPTiOELeQB/SHRclFzEOK4obbF59GQBse2lH6g
-              AAAEAk6SgYYTPlmsPomb8cAaZQvNGIsV9PeUcDHIrU/4lCzNX1BC+09OI4Qt5AH9IdFyUX
-              MQ4rihtsXn0ZAGx7aUfqAAAAF3VidW50dUBpcC0xNzItMzEtMjQtMjM5AQIDBAUG
-              -----END OPENSSH PRIVATE KEY-----
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+           
           script: |
             # Pull the latest image
             docker pull santhoshkaleru/santhosh_devops_ui:latest

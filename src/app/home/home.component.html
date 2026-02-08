@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div>
+    <button class="hbtn" (click)="show = !show">Sri Laxmi</button>
+    &nbsp;&nbsp;&nbsp;
+    <button class="hbtn" (click)="show = !show">Nivedita Sree</button>
+</div>
+<hr>
+<img *ngIf="!show" src="../../assets/sri.JPG">
+<img *ngIf="show" src="../../assets/Nive.jpg">
